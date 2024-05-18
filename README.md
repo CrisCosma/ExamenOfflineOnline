@@ -2,15 +2,21 @@
 
 ## Enunciado
 
-Una vez se ha puesto en marcha la primera versión de DeliverUS, los inversores han solicitado la inclusión de una nueva funcionalidad que consiste en ofrecer a los propietarios la posibilidad de promocionar sus restaurantes. Cada propietario sólo podrá promocionar uno de sus restaurantes.
+La empresa ha decidido ofrecer a los propietarios la posibilidad de cambiar manualmente el estado
+de sus restaurantes abiertos (online u offline). En caso de que un restaurante tenga un
+estado online u offline, la nueva funcionalidad proporcionaría un botón para alternar entre ambos
+estados. De lo contrario, dicho botón no debe estar disponible.
+Tenga en cuenta que cualquier restaurante nuevo se almacena inicialmente como offline de forma
+predeterminada. Solo los restaurantes offline pueden estar en línea y viceversa. Por otro lado, si un
+restaurante alcanza un estado de cerrado o cerrado temporalmente, la posibilidad de cambio manual
+no estará disponible y su uso estará prohibido por el sistema.
+Además, tenga en cuenta que un restaurante tampoco podrá cambiar su estado si tiene pedidos
+con un valor nulo en deliveredAt.
+La nueva funcionalidad también implicará proporcionar la lista de restaurantes propiedad del
+usuario ordenados por estado (ascendentemente) y, para el mismo estado, por nombre.
+Finalmente, el estado de cada restaurante debe ser visible.
+El sistema debe mostrar estos requisitos como se muestran en las siguientes capturas de pantalla:
 
-Un propietario podrá promocionar un restaurante de dos maneras distintas:
-
-* En el formulario de creación de restaurante. Por defecto, se seleccionará la opción de no promocionado. Si el propietario indica que el nuevo restaurante debe estar promocionado, pero ya existían restaurantes promocionados del mismo propietario, al pulsar el botón `Save` se mostrará un error y no se creará el restaurante.
-
-* En la pantalla de "Mis restaurantes", mediante un botón mostrado junto a cada restaurante, que permitirá mediante su pulsación promocionar el restaurante en cuestión. Si el propietario pulsa el botón para promocionar un nuevo restaurante y ya existían otros restaurantes promocionados del mismo dueño, se procederá a promocionar el restaurante indicado y se marcará como "no promocionado" el restaurante que lo fuese anteriormente. La aplicación debe pedir confirmación al propietario cuando se pulse el botón; utilice para ello el componente suministrado `ConfirmationModal`, similar al componente `DeleteModal` utilizado en clase.
-
-Además, los restaurantes promocionados aparecerán siempre al principio de los listados de restaurantes que se le presentan tanto a los propietarios como a los clientes. Además de presentarse al principio, los restaurantes promocionados deben destacarse visualmente, por lo que aparecerá una etiqueta de texto `¡En promoción!` con el color principal de la marca.
 
 ### Ejercicio 1
 
@@ -20,11 +26,14 @@ Realice todos los cambios necesarios en el proyecto de backend para implementar 
 
 Realice todos los cambios necesarios en el proyecto de frontend para implementar el nuevo requisito.
 
-![captura1](https://user-images.githubusercontent.com/19324988/235651836-d57d9c7e-4b8d-46a2-9154-b414a7abf702.png)
+![image](https://github.com/CrisCosma/ExamenOfflineOnline/assets/116158391/cef8ac6d-142d-42cc-9b76-566816ab2c81)
 
-![captura2](https://user-images.githubusercontent.com/19324988/235651849-4d03c7d9-f332-4952-8cbc-9fa5db4f97fb.png)
 
-![captura3](https://user-images.githubusercontent.com/19324988/235651853-e1d13916-4f47-4e17-97e0-5696b647bee7.png)
+![image](https://github.com/CrisCosma/ExamenOfflineOnline/assets/116158391/c12845e2-1511-4b32-a6bd-5169d4a26b73)
+
+
+![image](https://github.com/CrisCosma/ExamenOfflineOnline/assets/116158391/28bb6281-bad8-4abd-87a5-f616cf27bdd8)
+
 
 ## Introducción
 
